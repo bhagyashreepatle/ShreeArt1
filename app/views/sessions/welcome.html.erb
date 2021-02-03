@@ -1,0 +1,18 @@
+<head>
+<style> 
+div {color:blue;text-align: center;}
+h1 {color:white;text-align: center;} 
+body  
+{  
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtytFhTv6ZTeur__alBZ28t6Kv3ntvkDWu1w&usqp=CAU");background-repeat: no-repeat;
+    background-size:cover;
+    font-size: 300%; 
+}  
+</style>  
+</head>
+<body>
+  <h1>Welcome to ShreeArt</h1>
+  <button><%= link_to "ShowArt", controller: "arttable", action: 'list' %></button><br><br><br>
+ <button><%= link_to "Log Out ", controller: "sessions", action: 'destroy' %></button>
+ 
+</body>

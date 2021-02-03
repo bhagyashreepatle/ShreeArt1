@@ -1,0 +1,38 @@
+<%= link_to "Back to List ", controller: "arttable", action: 'list',class: "back-link"  %>
+
+<div class ="arttables">
+	<h2> add new art</h2>
+
+	<%= form_for(:arttables, url: {action: 'create', id: @arttable.id}) do |t| %>
+
+	  <table summary="Topic form fields">
+  
+		<tr>
+			<th> Art Name </th>
+			<td> <%= t.text_field(:artName)  %></td>
+		</tr>
+		
+		<tr>
+			<th> Descreption </th>
+			<td> <%= t.text_field(:descreption)  %></td>
+		</tr>
+		<tr>
+			<th> Art category</th>
+			<td> <%= t.text_field(:category)  %></td>
+		</tr>
+
+		<tr>
+			<th> Price </th>
+			<td> <%= t.text_field(:price)  %></td>
+		</tr>
+		<tr>
+			<th> Image </th>
+			<td> <%= t.file_field(:image)  %></td>
+		</tr>
+		
+		
+	</table>
+	<div class = "form-button">
+		<%= submit_tag("createArt") %>
+	</div>
+	<% end %>

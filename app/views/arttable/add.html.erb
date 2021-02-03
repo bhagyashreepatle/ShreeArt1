@@ -1,0 +1,24 @@
+<h1>Add art detail here</h1>
+<body>
+<div class="box">
+	<h2>Add New Art</h2>
+
+	<%= form_for(:arttables,url:{controller:"arttable",action:'add'}) do |t| %>
+
+	ArtName: <%=t.text_field(:artName)%><br>
+	ArtCategory: <%=t.text_field(:category)%><br>
+
+	Description:<%= t.text_field(:descreption)%><br>
+	Price:<%=t.text_field(:price)%><br>
+	Image:<%=t.file_field(:image)%><br>
+
+	<%= submit_tag("add Art")%><br>
+<% end %>	
+  <%= link_to "Back to list", controller:"arttable" , action:'list',class: "back-link"%>
+
+
+</div>	
+
+
+
+</body>

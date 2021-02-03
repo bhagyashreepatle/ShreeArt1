@@ -1,0 +1,32 @@
+
+
+<style> 
+div {color:blue;text-align: center;}
+h1 {color:green;text-align: center;} 
+body  
+{  
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRwbDHUqro1qUJ0HKZ_67vu35IHdfJwdy8ng&usqp=CAU");background-repeat: no-repeat;
+    background-size:cover; 
+}  
+</style>  
+
+<h1><strong><%= @arttable.artName %></strong></h1>
+<p>
+	<strong>Desception : </strong>$<%= @arttable.descreption %><br />
+	<strong>Category : </strong>$<%= @arttable.category %><br />
+	<strong>Price: </strong>$<%= @arttable.price %><br />
+	
+	<strong>Created date : </strong>$<%= @arttable.created_at  %><br />
+
+    <div style=" max-width:10%;max-height:10%;">
+	     <%= link_to image_tag(@arttable.image, style:'width=10%'),arttable_add_path %><br />
+	</div>
+
+	
+	
+	
+	
+
+</p>
+<hr />
+<%= link_to 'Back',{:action =>'list'}%>

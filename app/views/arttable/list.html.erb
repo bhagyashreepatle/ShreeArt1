@@ -1,0 +1,55 @@
+
+<style> 
+div {color:blue;text-align: center;}
+h1 {color:white;text-align: center;} 
+body  
+{  
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSx_u1WFa4opOiAY1MOYHYZCCEpku1HzdNJA&usqp=CAU");background-repeat: no-repeat;
+    background-size:cover; 
+}  
+</style>  
+
+<% @arttable_title="Arttable"%>
+<%= link_to "Back to home",controller:"sessions",action:'welcome',class: "back_link"%>
+
+<div class="Arttable Index">
+
+    <h1>Art list</h1>
+ 
+    <button><%= link_to "Add new art",controller:'arttable',action:'new', class: "action new"%></button>
+    <br>
+    <br>
+    <table class="listing" summury="arttable list" style="width: 50%" >
+      <tr class="header">
+        <th>Name of art</th>
+        <th>Action</th>
+      </tr>
+        <tr>
+            
+        </tr>
+
+      <% @arttable.each do |b| %>
+           <tr>
+               <td> <%= b.artName %></td>
+               <td class = "actions">
+
+                   <button><%= link_to "show", action:'show', id:b.id, class:"action show"%></button>
+                   <button><%= link_to "edit", action:'edit', id:b.id, class:"action edit"%></button>
+                   <button><%= link_to "delete", action:'delete', id:b.id, class:"action delete"%></button>
+                   
+               </td>
+
+
+           </tr>
+        
+        <% end %>
+
+
+
+
+
+
+
+
+    </table>
+    </div>

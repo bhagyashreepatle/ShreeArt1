@@ -1,0 +1,13 @@
+<div class="Art Delete">
+
+ <h2>delete Art</h2>
+<%= form_for(:arttables,url:{action:'destroy',id:@arttable.id}) do |t|%>
+<p>are you sure want to delete this permanently</p>
+<p class ="reference.name"> <%= @arttable.artName %></p>
+<div class="form-button">
+	<%= submit_tag("delete art")%>
+</div>
+ 
+<% end %>
+
+</div>
